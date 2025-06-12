@@ -1,0 +1,337 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(fonts/Poppins/Poppins-Regular.ttf);
+    /* 400, 600 */
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+    /* 400 */
+}
+
+/* Variables area */
+
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --softMagenta: hsl(300, 69%, 71%);
+}
+
+
+/* Reset settigs */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-overflow: balance;
+    word-wrap: break-word;
+}
+
+/* Global styling area */
+
+html{
+    font-family: 'Open Sans';
+    font-size: 18px;
+
+    color: white;
+}
+
+h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+p{
+    font-weight: 1rem;
+    font-weight: 400;
+
+    line-height: 1.5rem;
+}
+
+button{
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+/* Local styling area */
+body{
+    background-color: var(--violet);
+
+    position: relative;
+}
+
+picture{
+    position: fixed;
+
+    z-index: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    object-fit: cover;
+}
+
+.pictureImg{
+    width: 100%;
+    height: 45%;
+}
+
+.main{
+    position: absolute;
+
+    z-index: 1;
+
+    width: 80%;
+
+    margin-inline: 10%;
+    margin-block: 10%;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+#logoImg{
+    width: 42%;
+}
+
+#containerOfMainContent div>*{
+    margin-block: 1rem;
+}
+
+#mainImg{
+    width: 100%;
+
+    margin-block: 1.5rem;
+}
+
+button{
+    width: 80%;
+    height: 3rem;
+
+    border-radius: 1.5rem;
+    border: none;
+
+    color: var(--violet);
+
+    font-size: 0.8rem;
+
+    background-color: white;
+
+    box-shadow: 0px 21px 24px 3px rgba(62,66,66,0.3);
+}
+
+.iconsSection{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    column-gap: 10%;
+    
+    width: 30%;
+    margin-inline: 35%;
+    margin-bottom: 10%;
+}
+
+.iconsSection span a{
+    padding: 0.5rem;
+
+    border: 1px solid white;
+    border-radius: 50%;
+
+    width: 2rem;
+    height: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.3s ease-in;
+}
+
+.iconsSection a:hover{
+    transform: scale(1.2);
+
+    transition: transform 0.3s ease-in;
+}
+
+
+
+
+.attribution{
+    display: none;
+}
+/* Adaptive area */
+
+@media(min-width:500px){
+    .pictureImg{
+        height: 65%;
+    }
+}
+
+@media(min-width:650px){
+    .main{
+        width: 60%;
+
+        margin-inline: 20%;
+        margin-block: 5%;
+    }
+
+    .iconsSection{
+        margin-bottom: 5%;
+    }
+}
+
+@media(min-width:800px){
+    .main{
+        width: 50%;
+
+        margin-inline: 25%;
+        margin-block: 5%;
+    }
+
+    .iconsSection{
+        margin-bottom: 5%;
+    }
+
+    .pictureImg{
+        height: 75%;
+    }
+}
+
+
+@media(min-width:1000px){
+    h1{
+        font-size: 2rem;
+    }
+
+
+
+    .main{
+        width: 90%;
+
+        margin-inline: 5%;
+        margin-block: 5%;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    #containerOfMainContent{
+        display: flex;
+        flex-direction: row;
+        column-gap:2rem;
+    }
+
+    #containerOfMainContent div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        text-align: start;
+    }
+
+    .iconsSection{
+        margin-bottom: 5%;
+    }
+
+    .pictureImg{
+        height: 100%;
+    }
+
+    #logoImg{
+        width: 20%;
+        height: 3rem;
+    }
+
+    button{
+        width: 50%;
+        margin-right: 50%;
+    }
+
+    .iconsSection{
+        width: 20%;
+
+        margin-left: 80%;
+    }
+}
+
+@media(min-width:1200px){
+    h1{
+        font-size: 2.5rem;
+    }
+
+    .main{
+        width: 90%;
+
+        margin-inline: 5%;
+        margin-block: 5%;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    #containerOfMainContent{
+        display: flex;
+        flex-direction: row;
+        column-gap:3rem;
+    }
+
+    #containerOfMainContent div{
+        display: flex;
+        flex-direction: column;
+
+        align-self: start;
+
+        text-align: start;
+
+        padding-top: 3rem;
+    }
+
+    .iconsSection{
+        margin-bottom: 5%;
+    }
+
+    .pictureImg{
+        height: 100%;
+    }
+
+    #logoImg{
+        width: 15%;
+        height: 3rem;
+
+        margin-right: 85%;
+    }
+
+    button{
+        width: 40%;
+        margin-right: 60%;
+
+        transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+    }
+
+    button:active{
+        background-color: var(--softMagenta);
+
+        color: white;
+
+        transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+    }
+
+    .iconsSection{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-content: center;
+        column-gap: 10%;
+        
+        width: 10%;
+        margin-left: 90%;
+        margin-bottom: 5%;
+    }
+
+}
